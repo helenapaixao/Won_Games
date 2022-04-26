@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
   font-family:'Poppins';
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: local('Poppins Light'), local('Poppins-Light'),
         url('/fonts/Poppins-Light.woff2') format('woff2');
 }
@@ -41,7 +42,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: 'Poppins' , -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
   }
 `
 
