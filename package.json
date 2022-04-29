@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
-    "test": "jest --maxWorkers=50%",
-    "test:watch": "jest --watch --maxWorkers=25%",
-    "test:ci": "jest --runInBand",
+
+
+
     "generate": "yarn plop --plopfile generators/plopfile.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -18,8 +18,7 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
+      "yarn lint --fix"
     ]
   },
   "dependencies": {
@@ -49,7 +48,6 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.2",
-    "jest": "^27.4.7",
     "jest-styled-components": "^7.0.5",
     "lint-staged": "^12.3.3",
     "plop": "^3.0.5",
