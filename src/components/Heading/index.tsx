@@ -13,9 +13,8 @@ const Heading = ({
   lineLeft = false,
   lineBottom = false
 }: HeadingProps) => (
-  <S.Wrapper color={color}>
-    {children} lineLeft={lineLeft}
-    lineBottom={lineBottom}
+  <S.Wrapper color={color} lineLeft={lineLeft} lineBottom={lineBottom}>
+    {children}
   </S.Wrapper>
 )
 

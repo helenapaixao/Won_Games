@@ -1,10 +1,11 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import { HeadingProps } from '.'
 import media from 'styled-media-query'
+
+import { HeadingProps } from '.'
 
 const wrapperModifiers = {
   lineLeft: (theme: DefaultTheme) => css`
-    padding: ${theme.spacings.xxsmall};
+    padding-left: ${theme.spacings.xxsmall};
     border-left: ${theme.colors.secondary};
   `,
   lineBottom: (theme: DefaultTheme) => css`
@@ -16,7 +17,7 @@ const wrapperModifiers = {
       left: 0;
       bottom: -1rem;
       width: 5rem;
-      border: 0.5rem solid ${theme.colors.primary};
+      border-bottom: 0.5rem solid ${theme.colors.primary};
     }
   `
 }
