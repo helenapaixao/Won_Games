@@ -1,10 +1,10 @@
 export default {
   grid: {
     container: '130rem',
-    gutter: '3.2rem',
+    gutter: '3.2rem'
   },
   border: {
-  radius: '0.4rem',
+    radius: '0.4rem'
   },
   font: {
     family:
@@ -18,11 +18,11 @@ export default {
       medium: '1.6rem',
       large: '1.8rem',
       xlarge: '2.0rem',
-      xxlarge: '2.8rem',
+      xxlarge: '2.8rem'
     }
   },
   colors: {
-     primary: '#F231A5',
+    primary: '#F231A5',
     secondary: '#3CD3C1',
     mainBg: '#06092B',
     white: '#FAFAFA',
@@ -40,12 +40,11 @@ export default {
     xlarge: '4.8rem',
     xxlarge: '5.6rem'
   },
-   layers: {
+  layers: {
     base: 10,
     menu: 20,
     overlay: 30,
     modal: 40,
     alwaysOnTop: 50
   }
-
 }
