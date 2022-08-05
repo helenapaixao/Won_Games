@@ -44,6 +44,11 @@ export const Wrapper = styled.button<WrapperProps>`
     cursor: pointer;
     border-radius: ${theme.border.radius};
     padding: ${theme.spacings.xxsmall};
+
+    &:hover {
+      background: linear-gradient(180deg, #f062c0 0%, #ff5f5f 50%);
+    }
+
     ${!!size && wrapperModifiers[size](theme)};
     ${!!fullWidth && wrapperModifiers.fullWidth()};
     ${!!hasIcon && wrapperModifiers.withIcon(theme)};
