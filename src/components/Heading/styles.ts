@@ -35,7 +35,7 @@ export const Wrapper = styled.h2<HeadingProps>`
   ${({ theme, color, lineLeft, lineBottom, lineColor, size }) => css`
     color: ${theme.colors[color!]};
     ${!!size && wrapperModifiers[size](theme)};
-    ${lineLeft && wrapperModifiers.lineLeft(theme, lineColor)}
-    ${lineBottom && wrapperModifiers.lineBottom(theme, lineColor)}
+    ${lineLeft && wrapperModifiers.lineLeft(theme, lineColor!)};
+    ${lineBottom && wrapperModifiers.lineBottom(theme, lineColor!)}
   `}
 `
