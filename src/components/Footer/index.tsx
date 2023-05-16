@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import Heading from 'components/Heading'
 import Logo from 'components/Logo'
 import * as S from './styles'
@@ -9,10 +10,12 @@ const Footer = () => (
     <S.Content>
       <S.Column>
         <Heading color="black" size="small" lineBottom lineColor="secondary">
-          Contact
+          Contact Us
         </Heading>
+
         <a href="mailto:sac@wongames.com">sac@wongames.com</a>
       </S.Column>
+
       <S.Column>
         <Heading color="black" lineColor="secondary" lineBottom size="small">
           Follow us
@@ -49,6 +52,7 @@ const Footer = () => (
           </a>
         </nav>
       </S.Column>
+
       <S.Column>
         <Heading color="black" lineColor="secondary" lineBottom size="small">
           Links
