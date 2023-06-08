@@ -18,10 +18,12 @@ const wrapperModifiers = {
     ${media.lessThan('medium')`
       width: 5.8rem;
       height: 4.5rem;
+
       svg {
         height: 4.5rem;
         pointer-events: none;
       }
+
       .text {
         display: none;
       }
@@ -32,7 +34,8 @@ const wrapperModifiers = {
 export const Wrapper = styled.div<LogoProps>`
   ${({ theme, color, size, hideOnMobile }) => css`
     color: ${theme.colors[color!]};
+
     ${!!size && wrapperModifiers[size]}
-    ${hideOnMobile && wrapperModifiers.hideOnMobile}
+    ${!!hideOnMobile && wrapperModifiers.hideOnMobile}
   `}
 `
