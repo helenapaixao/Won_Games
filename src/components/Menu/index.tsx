@@ -71,9 +71,9 @@ const Menu = ({ username }: MenuProps) => {
           <S.RegisterBox>
             <Link href="/sign-in" passHref>
               <Button fullWidth size="large" as="a">
-                Sign in
+                Log in now
               </Button>
-            </Link>
+              </Link>
             <span>or</span>
             <Link href="/sign-up" passHref>
               <S.CreateAccount title="Sign Up">Sign Up</S.CreateAccount>
