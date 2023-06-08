@@ -1,10 +1,11 @@
 import TextField from 'components/TextField'
-import * as S from './styles'
+import { FormWrapper, FormLink } from 'components/Form'
 import Button from 'components/Button'
+import * as S from './styles'
 import { Email, Lock } from 'styled-icons/entypo'
 
 const FormSignIn = () => (
-  <S.Wrapper>
+  <FormWrapper>
     <form>
       <TextField
         name="email"
@@ -22,9 +23,11 @@ const FormSignIn = () => (
       <Button size="large" fullWidth>
         Sign in now
       </Button>
-      <S.FormLink>Don't have an account? <a>Sign up</a></S.FormLink>
+      <FormLink>
+        Don't have an account? <a>Sign up</a>
+      </FormLink>
     </form>
-  </S.Wrapper>
+  </FormWrapper>
 )
 
 export default FormSignIn
