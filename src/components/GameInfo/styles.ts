@@ -7,6 +7,15 @@ export const Wrapper = styled.div`
     position: relative;
     background: ${theme.spacings.small};
     padding-top: ${theme.spacings.xxlarge};
+
+    ${RibbonStyles.Wrapper} {
+      right: -1rem;
+
+      &:before {
+        border-right-width: 1rem;
+      }
+    }
+
     ${media.greaterThan('small')`
   padding: ${theme.spacings.small};
 

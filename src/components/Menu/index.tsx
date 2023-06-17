@@ -73,7 +73,7 @@ const Menu = ({ username }: MenuProps) => {
               <Button fullWidth size="large" as="a">
                 Log in now
               </Button>
-              </Link>
+            </Link>
             <span>or</span>
             <Link href="/sign-up" passHref>
               <S.CreateAccount title="Sign Up">Sign Up</S.CreateAccount>

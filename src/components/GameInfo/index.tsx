@@ -7,12 +7,10 @@ import Button from 'components/Button'
 export type GameInfoProps = {
   title: string
   description: string
-  price:string
+  price: string
 }
 
-
-
-const GameInfo = ({title, description, price}: GameInfoProps) => (
+const GameInfo = ({ title, description, price }: GameInfoProps) => (
   <S.Wrapper>
     <Heading color="black" lineBottom>
       {title}
@@ -21,10 +19,10 @@ const GameInfo = ({title, description, price}: GameInfoProps) => (
     <S.Description>{description}</S.Description>
 
     <S.ButtonsWrapper>
-     <Button icon={<AddShoppingCart />} size="large">
-      Add to cart
-     </Button>
-     <Button icon={<FavoriteBorder />} size="large" minimal>
+      <Button icon={<AddShoppingCart />} size="large">
+        Add to cart
+      </Button>
+      <Button icon={<FavoriteBorder />} size="large" minimal>
         Wishlist
       </Button>
     </S.ButtonsWrapper>

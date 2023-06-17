@@ -6,7 +6,9 @@ describe('<TextField />', () => {
   it('should render the heading', () => {
     const { container } = render(<TextField />)
 
-    expect(screen.getByRole('heading', { name: /TextField/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /TextField/i })
+    ).toBeInTheDocument()
 
     expect(container.firstChild).toMatchSnapshot()
   })

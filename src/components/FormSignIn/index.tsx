@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import TextField from 'components/TextField'
 import { FormWrapper, FormLink } from 'components/Form'
 import Button from 'components/Button'
@@ -24,7 +25,10 @@ const FormSignIn = () => (
         Sign in now
       </Button>
       <FormLink>
-        Don't have an account? <a>Sign up</a>
+        Don’t have an account?{' '}
+        <Link href="/sign-up">
+          <a>Sign up</a>
+        </Link>
       </FormLink>
     </form>
   </FormWrapper>

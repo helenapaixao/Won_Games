@@ -6,4 +6,4 @@ export default {
   component: Base
 } as Meta
 
-export const Default: Story = () => <Base />
+export const Default: Story = () => <Base children={undefined} />

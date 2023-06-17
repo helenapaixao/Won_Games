@@ -1,24 +1,21 @@
 import React from 'react'
-import { Container } from 'components/Container';
-import Menu from 'components/Menu';
-import { Footer } from 'templates/Auth/styles';
+import { Container } from 'components/Container'
+import Menu from 'components/Menu'
+import { Footer } from 'templates/Auth/styles'
 
 import * as S from './styles'
 
-
 export type BaseTemplateProps = {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
-
-const Base = ({children}: BaseTemplateProps) => (
+const Base = ({ children }: BaseTemplateProps) => (
   <section>
-    <Container >
+    <Container>
       <Menu />
     </Container>
 
     {children}
-
   </section>
 )
 
