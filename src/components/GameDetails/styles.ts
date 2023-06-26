@@ -1,3 +1,4 @@
+
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
@@ -40,4 +41,18 @@ export const Description = styled.p`
     font-weight: ${theme.font.bold};
     color: ${theme.colors.white};
   `}
+`
+
+export const IconsWrapper = styled.div`
+${({theme}) => css`
+color: ${theme.colors.white};
+`}
+
+`
+
+export const Icon = styled.span`
+${({theme}) => css`
+margin-right: ${theme.spacings.xxsmall} ;
+`}
+
 `
