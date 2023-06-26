@@ -2,18 +2,21 @@ import Heading from 'components/Heading'
 
 import * as S from './styles'
 
-export type  TextContentProps = {
+export type TextContentProps = {
   title?: string
   content: string
 }
 
-const TextContent = ({title, content}: TextContentProps) => <S.Wrapper>
-  <Heading lineLeft lineColor='secondary'>
+const TextContent = ({ title, content }: TextContentProps) => (
+  <S.Wrapper>
     {!!title && (
-      <Heading lineLeft lineColor='secondary'>
+      <Heading lineLeft lineColor="secondary">
         {title}
-        </Heading>
+      </Heading>
     )}
-    <div dangerouslySetInnerHTML={{__html: content}}/>
-  </Heading>
-</S.Wrapper>
+
+    <div dangerouslySetInnerHTML={{ __html: content }} />
+  </S.Wrapper>
+)
+
+export default TextContent
