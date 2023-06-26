@@ -14,5 +14,5 @@ export default {
 } as Meta
 
 export const Default: Story<TextContentProps> = (args) => (
-  <TextContent  {...args} />
+  <TextContent {...args} />
 )
