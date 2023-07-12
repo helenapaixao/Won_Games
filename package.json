@@ -2,9 +2,7 @@
   "name": "react-avancado-boilerplate",
   "version": "1.0.0",
   "private": true,
-  "engines": {
-    "node": "16.20.1"
-  },
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
