@@ -57,7 +57,6 @@ export async function getStaticProps() {
       upcommingGames: gamesMock,
       upcommingHighlight: highlightMock,
       recommendedGames: gamesMock
-
     }
   }
 }
