@@ -1,5 +1,9 @@
 import Game, { GameTemplateProps } from 'templates/Game'
 import GalleryMock from 'components/Gallery/mock'
+
+import gamesMock from 'components/GameCardSlider/mock'
+import highlightMock from 'components/Highlight/mock'
+
 export default function Index(props: GameTemplateProps) {
   return <Game {...props} />
 }
@@ -13,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps() {
-  const descriptionHTML =  `
+  const descriptionHTML = `
   <img src="https://items.gog.com/not_a_cp/ENG_product-page-addons-2020_yellow_on_black.png"><br>
   * Exclusive Digital Comic - Cyberpunk 2077: Big City Dreams will be available in English only.
   <hr><p class="module">Korean Voiceover will be added on 11th December 2020.</p><br><img alt="" src="https://items.gog.com/not_a_cp/EN/EN-About-the-Game.png"><br><br><b>Cyberpunk 2077</b> is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality. You can customize your character’s cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.
@@ -43,14 +47,17 @@ export async function getStaticProps() {
       gallery: GalleryMock,
       description: descriptionHTML,
       details: {
-          developer: 'CD PROJEKT',
-          releaseDate: '2023-11-21T23:00:00',
-          platforms: ['windows'],
-          publisher: 'CD PROJEKT',
-          rating: 'BR0',
-          genres: ['Role-playing']
+        developer: 'CD PROJEKT',
+        releaseDate: '2023-11-21T23:00:00',
+        platforms: ['windows'],
+        publisher: 'CD PROJEKT',
+        rating: 'BR0',
+        genres: ['Role-playing']
+      },
+      upcommingGames: gamesMock,
+      upcommingHighlight: highlightMock,
+      recommendedGames: gamesMock
 
-      }
     }
   }
 }
