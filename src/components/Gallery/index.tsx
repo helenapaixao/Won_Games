@@ -7,11 +7,17 @@ import Slider, { SliderSettings } from 'components/Slider'
 
 import * as S from './styles'
 
-const settings: SliderSettings = {
-  arrows: true,
-  slidesToShow: 4,
+const commonSettings: SliderSettings = {
   infinite: false,
   lazyLoad: 'ondemand',
+  arrows: true,
+  nextArrow: <ArrowRight aria-label="next images" />,
+  prevArrow: <ArrowLeft aria-label="previous images" />
+}
+
+const settings: SliderSettings = {
+  ...commonSettings,
+  slidesToShow: 4,
   responsive: [
     {
       breakpoint: 1375,
@@ -46,9 +52,13 @@ const settings: SliderSettings = {
       }
     }
   ],
-  nextArrow: <ArrowRight aria-label="next images" />,
-  prevArrow: <ArrowLeft aria-label="previous images" />
 }
+
+const modalSettings: SliderSettings = {
+  ...commonSettings,
+  slidesToShow: 1
+}
+
 
 export type GalleryImageProps = {
   src: string
@@ -95,6 +105,19 @@ const Gallery = ({ items }: GalleryProps) => {
             onClick={() => setIsOpen(false)}
           />
         </S.Close>
+        <S.Content>
+          <Slider settings={modalSettings}>
+            {items.map((item, index) => (
+              <img
+                key={`
+                gallery-${index}`}
+                src={item.src}
+                alt={item.label}
+              />
+            ))}
+          </Slider>
+
+          </S.Content>
       </S.Modal>
     </S.Wrapper>
   )
