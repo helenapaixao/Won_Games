@@ -26,7 +26,13 @@ margin-bottom: calc(${theme.spacings.xlarge} * 2)
 `
 
 export const SectionGameInfo = styled(Section)``
+export const SectionGallery = styled(Section)`
+  display: none;
 
+  ${media.greaterThan('medium')`
+display:block ;
+`}
+`
 export const Cover = styled.div<CoverProps>`
   ${({ src }) => css`
     position: absolute;
