@@ -1,7 +1,6 @@
-import React from 'react'
 import { Container } from 'components/Container'
+import Footer from 'components/Footer'
 import Menu from 'components/Menu'
-import { Footer } from 'templates/Auth/styles'
 
 import * as S from './styles'
 
@@ -10,13 +9,19 @@ export type BaseTemplateProps = {
 }
 
 const Base = ({ children }: BaseTemplateProps) => (
-  <section>
+  <S.Wrapper>
     <Container>
       <Menu />
     </Container>
 
     {children}
-  </section>
+
+    <S.SectionFooter>
+      <Container>
+        <Footer />
+      </Container>
+    </S.SectionFooter>
+  </S.Wrapper>
 )
 
 export default Base
