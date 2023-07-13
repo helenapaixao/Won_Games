@@ -91,6 +91,6 @@ export const Close = styled.div`
   `}
 `
 export const Content = styled.div`
-max-width:120rem;
-max-height: 80rem;
+  max-width: 120rem;
+  max-height: 80rem;
 `
