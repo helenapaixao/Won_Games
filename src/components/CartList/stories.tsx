@@ -1,6 +1,9 @@
-import { Story, Meta } from '@storybook/react'
+import { Story, Meta } from '@storybook/react/types-6-0'
 import CartList, { CartListProps } from '.'
+
 import mockItems from './mock'
+
+
 
 export default {
   title: 'CartList',
@@ -8,6 +11,11 @@ export default {
   args: {
     items: mockItems,
     total: 'R$ 330,00'
+  },
+  argTypes: {
+    items: {
+      type: ''
+    }
   },
   parameters: {
     backgrounds: {
