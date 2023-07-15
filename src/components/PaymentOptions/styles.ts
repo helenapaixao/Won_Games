@@ -16,3 +16,5 @@ export const CardItem = styled.div``
 
 
 export const CardInfo = styled.div``
+
+export const AddCard = styled.div``

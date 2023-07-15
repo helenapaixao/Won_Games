@@ -1,6 +1,8 @@
 import Heading from 'components/Heading'
 import * as S from './styles'
 import Radio from 'components/Radio'
+import { Add, ShoppingCart } from 'styled-icons/material-outlined'
+import Button from 'components/Button'
 
 export type PaymentOptionsProps = {
   cards?: PaymentCard[]
@@ -34,9 +36,19 @@ const PaymentOptions = ({ cards, handlePayment }: PaymentOptionsProps) => (
             />
           </S.CardItem>
         ))}
+        <S.AddCard>
+          <Add size={14} /> Add new Card
+        </S.AddCard>
       </S.CardList>
     </S.Body>
-    <S.Footer></S.Footer>
+    <S.Footer>
+      <Button as="a"  fullWidth minimal>
+        Continue shopping
+      </Button>
+      <Button fullWidth icon={<ShoppingCart />}>
+        Buy Now
+      </Button>
+    </S.Footer>
   </S.Wrapper>
 )
 
