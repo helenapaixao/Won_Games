@@ -50,7 +50,12 @@ const PaymentOptions = ({ cards, handlePayment }: PaymentOptionsProps) => {
         <Button as="a" fullWidth minimal>
           Continue shopping
         </Button>
-        <Button fullWidth icon={<ShoppingCart />} onClick={handlePayment} disabled={!checked}>
+        <Button
+          fullWidth
+          icon={<ShoppingCart />}
+          onClick={handlePayment}
+          disabled={!checked}
+        >
           Buy now
         </Button>
       </S.Footer>
