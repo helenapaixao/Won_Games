@@ -3,8 +3,6 @@ import CartList, { CartListProps } from '.'
 
 import mockItems from './mock'
 
-
-
 export default {
   title: 'CartList',
   component: CartList,
@@ -22,7 +20,7 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta
+} as unknown as Meta
 
 export const Default: Story<CartListProps> = (args) => (
   <div style={{ maxWidth: 800 }}>
