@@ -12,7 +12,7 @@ export default {
 } as Meta
 
 export const Default: Story<PaymentOptionsProps> = (args) => (
-  <div style={{padding:16,maxWidth: 400}}>
-  <PaymentOptions {...args} />
+  <div style={{ padding: 16, maxWidth: 400 }}>
+    <PaymentOptions {...args} />
   </div>
 )
