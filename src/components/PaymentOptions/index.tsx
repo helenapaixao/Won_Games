@@ -1,8 +1,8 @@
-import Heading from 'components/Heading'
-import * as S from './styles'
-import Radio from 'components/Radio'
-import { Add, ShoppingCart } from 'styled-icons/material-outlined'
+import { Add, ShoppingCart } from '@styled-icons/material-outlined'
 import Button from 'components/Button'
+import Heading from 'components/Heading'
+import Radio from 'components/Radio'
+import * as S from './styles'
 
 export type PaymentOptionsProps = {
   cards?: PaymentCard[]
@@ -18,10 +18,11 @@ export type PaymentCard = {
 const PaymentOptions = ({ cards, handlePayment }: PaymentOptionsProps) => (
   <S.Wrapper>
     <S.Body>
-      <Heading color="black" lineBottom>
+      <Heading color="black" size="small" lineBottom>
         Payment
       </Heading>
-      <S.CardList>
+
+      <S.CardsList>
         {cards?.map((card) => (
           <S.CardItem key={card.number}>
             <S.CardInfo>
@@ -29,24 +30,25 @@ const PaymentOptions = ({ cards, handlePayment }: PaymentOptionsProps) => (
               {card.number}
             </S.CardInfo>
             <Radio
-              onCheck={() => {}}
               name="credit-card"
               id={card.number}
               value={card.number}
+              onCheck={() => ({})}
             />
           </S.CardItem>
         ))}
-        <S.AddCard>
-          <Add size={14} /> Add new Card
+
+        <S.AddCard role="button">
+          <Add size={14} /> Add a new credit card
         </S.AddCard>
-      </S.CardList>
+      </S.CardsList>
     </S.Body>
     <S.Footer>
-      <Button as="a"  fullWidth minimal>
+      <Button as="a" fullWidth minimal>
         Continue shopping
       </Button>
-      <Button fullWidth icon={<ShoppingCart />}>
-        Buy Now
+      <Button fullWidth icon={<ShoppingCart />} onClick={handlePayment}>
+        Buy now
       </Button>
     </S.Footer>
   </S.Wrapper>
