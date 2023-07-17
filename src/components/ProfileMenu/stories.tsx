@@ -5,8 +5,10 @@ export default {
   title: 'ProfileMenu',
   component: ProfileMenu,
   parameters: {
-    default:'won-dark'
+    default: 'won-dark'
   }
 } as Meta
 
-export const Default: Story<ProfileMenuProps> = (args) => <ProfileMenu {...args} />
+export const Default: Story<ProfileMenuProps> = (args) => (
+  <ProfileMenu {...args} />
+)
