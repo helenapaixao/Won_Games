@@ -1,0 +1,34 @@
+import Link from 'next/link'
+import * as S from './styles'
+import { AccountCircle, CreditCard, FormatListBulleted, Logout } from 'styled-icons/material-outlined'
+
+const ProfileMenu = () => (
+  <S.Nav>
+    <Link href="/profile/me" passHref>
+      <S.Link>
+        <AccountCircle size={24}/>
+        <span>My profile</span>
+      </S.Link>
+    </Link>
+    <Link href="/profile/cards" passHref>
+      <S.Link>
+        <CreditCard size={24}/>
+        <span>My cards</span>
+      </S.Link>
+    </Link>
+    <Link href="/profile/orders" passHref>
+      <S.Link>
+        <FormatListBulleted size={24}/>
+        <span>My orders</span>
+      </S.Link>
+    </Link>
+    <Link href="/profile/orders" passHref>
+      <S.Link>
+        <Logout size={24}/>
+        <span>Sign out</span>
+      </S.Link>
+    </Link>
+  </S.Nav>
+)
+
+export default ProfileMenu
