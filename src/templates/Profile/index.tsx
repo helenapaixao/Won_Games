@@ -4,7 +4,11 @@ import { Container } from 'components/Container'
 import Heading from 'components/Heading'
 import ProfileMenu from 'components/ProfileMenu'
 
-const Profile = () => (
+export type ProfileTemplateProps = {
+  children: React.ReactNode
+}
+
+const Profile = ({children}: ProfileTemplateProps) => (
   <Base>
     <Container>
       <Heading lineLeft lineColor='secondary'>
@@ -13,6 +17,7 @@ const Profile = () => (
       <S.Main>
         <ProfileMenu />
         <S.Content>
+          {children}
         </S.Content>
       </S.Main>
     </Container>
